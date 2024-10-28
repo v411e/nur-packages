@@ -11,7 +11,7 @@ pkgs.buildGoModule rec {
     sha256 = "sha256-Bqy9eFUvUgSdyChzh52qqPVvMi+3ad01koxVgnibbLk=";
   };
 
-  vendorHash = "sha256-/NMp64JeCQjCcEYkE6lYzu/E+irTcwkmDCJhB04ALFY=z";
+  vendorHash = "sha256-/NMp64JeCQjCcEYkE6lYzu/E+irTcwkmDCJhB04ALFY=";
 
   doCheck = false;
 
@@ -23,6 +23,8 @@ pkgs.buildGoModule rec {
   ];
 
   buildPhase = ''
+    go mod vendor
+    make goreleaser
     make kopia-ui
   '';
 }
