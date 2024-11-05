@@ -17,6 +17,7 @@
   example-package = pkgs.callPackage ./pkgs/example-package { };
   hello-nur = pkgs.callPackage ./pkgs/hello-nur { };
   kopia-ui = pkgs.callPackage ./pkgs/kopia-ui { };
+  kopia = pkgs.callPackage ./pkgs/kopia { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
