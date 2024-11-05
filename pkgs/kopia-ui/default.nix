@@ -22,8 +22,7 @@ pkgs.buildGoModule rec {
     "-X github.com/kopia/kopia/repo.BuildInfo=${src.rev}"
   ];
 
-  buildPhase = ''
-    go mod vendor
+  postBuild = ''
     make goreleaser
     make kopia-ui
   '';
